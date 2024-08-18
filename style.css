@@ -1,0 +1,116 @@
+body {
+  display: flex;
+  justify-content: center; /* Zentriert horizontal */
+  align-items: center; /* Zentriert vertikal */
+  height: 100vh; /* Nimmt die volle Höhe des Ansichtsfensters ein */
+  margin: 0; /* Entfernt den Standardabstand */
+  background-image: url(images/background.png); /* Pfad zum Hintergrundbild */
+  background-size: cover; /* Deckt den gesamten Hintergrund ab */
+  background-position: center; /* Zentriert das Hintergrundbild */
+}
+
+
+.box {
+  width: 60%; /* Breite der Box */
+  height: 100%; /* Höhe der Box */
+  background-color: rgba(255, 255, 255, 0.4); /* Hintergrundfarbe der Box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Schatten für die Box */
+  
+}
+
+#inbox{
+  border: solid darkgray 6px;
+ /* border-radius: 20px; */
+  height: 500px;
+  width: 50%;
+  margin: 10px;
+  padding: 0;
+}
+
+.header{
+  text-align: center;
+  color: #006fae;
+  -webkit-text-stroke: 2px gray;
+  font-weight: bolder;
+  font-size: 50px;
+  opacity: 100%; 
+  margin-bottom: 10px;
+}
+
+
+.firstrowcontainer { 
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". .";
+}
+
+.menuItem{
+  font-weight: bolder;
+  font-size: 20px; 
+  color: #006fae;
+}
+
+#headerSwitch{
+  padding-left: 40px;
+  font-size: 25px;
+  color: #006fae; 
+  font-weight: bolder;
+}
+
+
+
+/* checkbox */
+
+
+/* */ 
+
+/* custom switch ld */
+
+
+.custom-switch.custom-switch-lg .custom-control-label {
+  padding-left: 3rem;
+  padding-bottom: 2rem;
+}
+
+.custom-switch.custom-switch-lg .custom-control-label::before {
+  height: 2rem;
+  width: calc(3rem + 0.75rem);
+  border-radius: 4rem;
+}
+
+.custom-switch.custom-switch-lg .custom-control-label::after {
+  width: calc(2rem - 4px);
+  height: calc(2rem - 4px);
+  border-radius: calc(3rem - (2rem / 2));
+}
+
+.custom-switch.custom-switch-lg .custom-control-input:checked ~ .custom-control-label::after {
+  transform: translateX(calc(2rem - 0.25rem));
+}
+
+/* custom switch md */
+.custom-switch.custom-switch-md .custom-control-label {
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.custom-switch.custom-switch-md .custom-control-label::before {
+  height: 1.5rem;
+  width: calc(2rem + 0.75rem);
+  border-radius: 3rem;
+}
+
+.custom-switch.custom-switch-md .custom-control-label::after {
+  width: calc(1.5rem - 4px);
+  height: calc(1.5rem - 4px);
+  border-radius: calc(2rem - (1.5rem / 2));
+}
+
+.custom-switch.custom-switch-md .custom-control-input:checked ~ .custom-control-label::after {
+  transform: translateX(calc(1.5rem - 0.25rem));
+}
+/* */ 
