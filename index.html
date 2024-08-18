@@ -19,106 +19,7 @@
 		/>
 
 		<link rel="stylesheet" href="style.css">
-		
- <!--
-		<style>
-			body {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				height: 100vh;
-				margin: 0;
-				background-image: url(images/background.png);
-				background-size: cover;
-				background-position: center;
-			}
 
-			.box {
-				width: 60%;
-				height: 100%;
-				background-color: rgba(255, 255, 255, 0.4);
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-			}
-
-			#inbox {
-				border: solid darkgray 6px;
-				height: 500px;
-				width: 50%;
-				margin: 10px;
-				padding: 0;
-			}
-
-			.header {
-				text-align: center;
-				color: #006fae;
-				-webkit-text-stroke: 2px gray;
-				font-weight: bolder;
-				font-size: 50px;
-				opacity: 100%;
-				margin-bottom: 10px;
-			}
-
-			.menuItem {
-				font-weight: bolder;
-				font-size: 20px;
-				color: #006fae;
-			}
-
-			#headerSwitch {
-				padding-left: 40px;
-				font-size: 25px;
-				color: #006fae;
-				font-weight: bolder;
-			}
-
-			/* custom switch lg */
-			.custom-switch.custom-switch-lg .custom-control-label {
-				padding-left: 3rem;
-				padding-bottom: 2rem;
-			}
-
-			.custom-switch.custom-switch-lg .custom-control-label::before {
-				height: 2rem;
-				width: calc(3rem + 0.75rem);
-				border-radius: 4rem;
-			}
-
-			.custom-switch.custom-switch-lg .custom-control-label::after {
-				width: calc(2rem - 4px);
-				height: calc(2rem - 4px);
-				border-radius: calc(3rem - (2rem / 2));
-			}
-
-			.custom-switch.custom-switch-lg
-				.custom-control-input:checked
-				~ .custom-control-label::after {
-				transform: translateX(calc(2rem - 0.25rem));
-			}
-
-			/* custom switch md */
-			.custom-switch.custom-switch-md .custom-control-label {
-				padding-left: 2rem;
-				padding-bottom: 1.5rem;
-			}
-
-			.custom-switch.custom-switch-md .custom-control-label::before {
-				height: 1.5rem;
-				width: calc(2rem + 0.75rem);
-				border-radius: 3rem;
-			}
-
-			.custom-switch.custom-switch-md .custom-control-label::after {
-				width: calc(1.5rem - 4px);
-				height: calc(1.5rem - 4px);
-				border-radius: calc(2rem - (1.5rem / 2));
-			}
-
-			.custom-switch.custom-switch-md
-				.custom-control-input:checked
-				~ .custom-control-label::after {
-				transform: translateX(calc(1.5rem - 0.25rem));
-			}
-		</style> -->
 	</head>
 	<body>
 		<div class="box">
@@ -650,25 +551,25 @@
 			document.addEventListener('DOMContentLoaded', function () {
 				// Prices (dummy values, adjust as needed)
 				const prices = {
-					motor: 1000,
-					turbo: 500,
-					getriebe: 800,
-					bremsen: 600,
-					fahrwerk: 400,
-					panzerung: 1200,
-					primaerfarbe: 200,
-					sekundaerfarbe: 150,
-					farbtyp: 100,
-					perleffekt: 250,
-					felgenfarbe: 300,
-					felgen: 350,
-					reifenqualm: 150,
-					unterbodenlicht: 500,
-					sticker: 200,
-					scheibentoenung: 100,
-					hupe: 50,
-					extrasAussen: 3000,
-					extrasInnen: 2000,
+					motor: 150000,
+					turbo: 80000,
+					getriebe: 70000,
+					bremsen: 50000,
+					fahrwerk: 50000,
+					panzerung: 50000,
+					primaerfarbe: 50000,
+					sekundaerfarbe: 50000,
+					farbtyp: 15000,
+					perleffekt: 30000,
+					felgenfarbe: 10000,
+					felgen: 10000,
+					reifenqualm: 10000,
+					unterbodenlicht: 10000,
+					sticker: 5000,
+					scheibentoenung: 10000,
+					hupe: 5000,
+					extrasAussen: 10000,
+					extrasInnen: 10000,
 				};
 
 				// Get references to all elements
@@ -734,8 +635,8 @@
 					}
 
 					// Update displays
-					preisDisplay.textContent = total.toFixed(2) + '€';
-					preisFinalDisplay.textContent = finalPrice.toFixed(2) + '€';
+					preisDisplay.textContent = total.toLocaleString('de-DE') + '€';
+					preisFinalDisplay.textContent = finalPrice.toLocaleString('de-DE') + '€';
 				}
 
 				// Add event listeners to switches

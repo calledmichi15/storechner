@@ -53,6 +53,14 @@ body {
 
 #headerSwitch {
   padding-left: 40px;
+  padding-top: 4px; 
+  font-size: 20px; /* Adjusted font size */
+  color: #006fae; 
+  font-weight: bolder;
+}
+#headerSwitch2 {
+  padding-left: 40px;
+  padding-top: 4px; 
   font-size: 20px; /* Adjusted font size */
   color: #006fae; 
   font-weight: bolder;
