@@ -722,8 +722,16 @@
 					total += extrasAussenPrice + extrasInnenPrice;
 
 					// Apply discount
-					const rabatt = parseInt(inputs.rabatt.value) || 0;
-					const finalPrice = total - (total * rabatt) / 100;
+					const rabattInput = inputs.rabatt.value.trim();
+					let finalPrice;
+
+					if (rabattInput.startsWith('+')) {
+   					const zuschlag = parseInt(rabattInput.substring(1)) || 0;
+   					finalPrice = total + (total * zuschlag) / 100;
+					} else {
+    				const rabatt = parseInt(rabattInput) || 0;
+    				finalPrice = total - (total * rabatt) / 100;
+					}
 
 					// Update displays
 					preisDisplay.textContent = total.toFixed(2) + '€';
